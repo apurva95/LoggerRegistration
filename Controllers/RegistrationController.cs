@@ -29,7 +29,10 @@ namespace LoggerRegistration.Controllers
                 ProjectName = model.ProjectName,
                 UserName = model.UserName,
                 ServiceName = model.ServiceName,
-                CreatedAt = DateTime.UtcNow
+                CreatedAt = DateTime.UtcNow,
+                Emails = model.Emails,
+                ErrorAlerts = model.ErrorAlerts,
+                EmailId = model.EmailId
             };
 
             registration.RegistrationId = _registrationService.GenerateRegistrationId(registration);

@@ -33,5 +33,11 @@ namespace LoggerRegistration.Models
 
         [BsonElement("CreatedAt")]
         public DateTime CreatedAt { get; set; }
+
+        [BsonElement("Emails")]
+        public List<Email>? Emails { get; set; }
+
+        [BsonElement("LastEmailAlert")]
+        public DateTime? LastEmailAlert { get; set; }
     }
 }

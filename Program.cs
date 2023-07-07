@@ -2,6 +2,7 @@ using LoggerRegistration.Data;
 using LoggerRegistration.Interface;
 using LoggerRegistration.Service;
 using MongoDB.Driver;
+using MongoDB.Driver.Core.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,7 +20,6 @@ builder.Services.AddCors(options =>
                .AllowAnyMethod();
     });
 });
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

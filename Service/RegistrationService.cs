@@ -25,7 +25,7 @@ namespace LoggerRegistration.Service
             _dbContext.Registrations.InsertOne(registration);
             try
             {
-                SendEmail(registration.EmailId, "Registration Confirmation!", $"Your Registration Id: {registration.RegistrationId}.\n Please keep this for future refrence and to see logs.");
+                SendEmail(registration.EmailId, "Registration Confirmation!", $"Your Registration Id: {registrationId.ToLower()}.\n Please keep this for future refrence and to see logs.");
             }
             catch (Exception ex)
             {
